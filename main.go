@@ -106,6 +106,31 @@ func main() {
 	zz, yy := 1, 2
 	r := add(zz, yy)
 	fmt.Println(r)
+
+	zaa := [5]int{}
+	fmt.Println(zaa)
+	mutateArray(zaa[0:len(zaa)])
+	mutateArray(zaa[:])
+	fmt.Print(zaa)
+
+	p1 := person{
+		Id:   "oisjkakaf",
+		Name: "Panuwat",
+	}
+	fmt.Println(p1)
+
+}
+
+// Struct
+
+type person struct {
+	Id   string
+	Name string
+}
+
+// pass by value
+func mutateArray(a []int) {
+	a[0] = 10
 }
 
 func add(val1, val2 int) int {
